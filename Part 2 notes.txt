@@ -1,0 +1,4 @@
+CSE3504 Project 2 Notes
+1) Write code reading provided file
+2) Write 3pg paper about some algorithm stuff
+3) Include extra credit tip
