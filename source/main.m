@@ -4,5 +4,5 @@
 %% Connor Jackson
 %% See code below for stuff.
 
-clc
+clc;
 clear;
