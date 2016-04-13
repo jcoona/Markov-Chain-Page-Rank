@@ -3,3 +3,6 @@
 %% Adam Claxton
 %% Connor Jackson
 %% See code below for stuff.
+
+clc;
+clear;
