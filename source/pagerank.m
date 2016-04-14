@@ -5,19 +5,13 @@ function pmatrix = pagerank(nodes, edges, indexlinks, sourcedest)
 %make nxn matrix n = nodes
 pmatrix = zeros(nodes, nodes);
 fprintf('Solving pmatrix now.');
-for i = 1:nodes
-    for j = 1:nodes
-        %check to see if the pair exists in the source destination matrix
-        [matrixmember, index] = ismember([j i], sourcedest, 'rows');
-        %if it is
-        if matrixmember == 1
-            %count number of times j shows up in the source column
-            outgoinglinks = sum(sourcedest(:,1) == j);
-            %put into matrix
-            pmatrix(i,j) = 1/outgoinglinks;
-        end
-    end
-    fprintf('%d\n',i);
+for i = 1:length(sourcedest)
+   %count number of times j shows up in the source column
+   sourcenode = sourcedest(i,1);
+   destnode = sourcedest(i,2);
+   outgoinglinks = sum(sourcedest(:,1) == sourcenode);
+   %put into matrix
+   pmatrix(destnode,sourcenode) = 1/outgoinglinks;
 end
 
 end
