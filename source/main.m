@@ -7,6 +7,7 @@
 clc;
 clear;
 
+%%Load the hollins file into these variables.
 [Nodes, Edges, IndexLinks, SourceDest] = loadhollins('hollins.dat');
 
 
