@@ -17,14 +17,12 @@ stateVect = ones(Nodes,1)/Nodes;
 lastState=zeros(Nodes,1);
 %%Now we will begin our journey down the Markov chain, and attempt to find
 %%the steady state vector by running until it is unchanged.
-fprintf('Finding state vectors\n');
-i=0;
+fprintf('Finding state vectors');
 while(lastState ~= stateVect)
     lastState=stateVect;
     stateVect = mtimes(transitionMatrix,stateVect);
-    i=i+1;
 end
-fprintf('steady after %d iterations\n',i);
+fprintf('steady\n');
 
 end
 
