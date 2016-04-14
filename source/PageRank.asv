@@ -1,5 +1,6 @@
 function [ rankedPages ] = PageRank( Nodes, Edges, IndexLinks, SourceDest )
 %
+
 damping = .85; %the damping factor (will probably make a parameter later)
 adjacencyMatrix = GenerateMatrix( Nodes, SourceDest );
 
@@ -11,18 +12,15 @@ transitionMatrix = adjacencyMatrix*damping + (1-damping)/Nodes;
 %%to 1, but with redistributed probability so the small sites have a
 %%chance.
 
-stateVect = ones(Nodes,1)/Nodes;
-%initialize state vector to give equal probability to all nodes
+steadyState = MarkovChain( Nodes, transitionMatrix );
+%%Tihs uses the transition matrix to find a steady state vector ranking the
+%%probability that a monkey clicking on random links will end up at each
+%%webpage at any given time.
 
-lastState=zeros(Nodes,1);
-%%Now we will begin our journey down the Markov chain, and attempt to find
-%%the steady state vector by running until it is unchanged.
-fprintf('Finding state vectors');
-while(lastState ~= stateVect)
-    lastState=stateVect;
-    stateVect = mtimes(transitionMatrix,stateVect);
-end
-fprintf('steady\n');
+pagesWithRanks = [steadyState IndexLinks];
+%%concatenate steady vector with original links so they may be sorted.
 
+rankedPages = sortRows(pagesWithRanks,-3
 end
+
 
