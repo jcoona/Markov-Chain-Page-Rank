@@ -9,5 +9,5 @@ clear;
 
 %%Load the hollins file into these variables.
 [Nodes, Edges, IndexLinks, SourceDest] = loadhollins('hollins.dat');
-
+pmatrix = pagerank(Nodes, Edges, IndexLinks, SourceDest);
 
