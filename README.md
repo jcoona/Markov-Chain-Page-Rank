@@ -1,5 +1,4 @@
 # Markov-Chain-Page-Rank
-CSE3504 Project involving Markov chains and page rank
 
 Written by Adam Claxton, Connor Jackson
 This project is an implementation of Google's PageRank algorithm, see here: https://en.wikipedia.org/wiki/PageRank
