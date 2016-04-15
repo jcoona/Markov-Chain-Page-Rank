@@ -8,6 +8,6 @@ clc;
 clear;
 
 %%Load the hollins file into these variables.
-[Nodes, Edges, IndexLinks, SourceDest] = loadhollins('hollins.dat');
-PageRank(Nodes, Edges, IndexLinks, SourceDest);
+[nodes, edges, indexlinks, sourcedest] = loadhollins('hollins.dat');
+rankedpages = pagerank(nodes, indexlinks, sourcedest, 0.85);
 

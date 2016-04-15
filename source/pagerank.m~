@@ -1,5 +1,7 @@
-function [ rankedPages ] = pagerank(nodes, indexlinks, sourcedest, damping)
+function [ rankedPages ] = pagerank(nodes, indexlinks, sourcedest)
+%
 
+damping = .85; %the damping factor (will probably make a parameter later)
 adjacencyMatrix = GenerateMatrix(nodes, sourcedest);
 
 %%The first thing we need to do is modify the adjacency matrix to account

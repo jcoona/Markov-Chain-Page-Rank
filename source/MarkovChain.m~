@@ -1,4 +1,4 @@
-function stateVect = MarkovChain(nodes, transitionMatrix)
+function [ steadyState ] = MarkovChain(nodes, transitionMatrix)
 errorMargin = .0000001;
 stateVect = ones(nodes,1)/nodes;
 %initialize state vector to give equal probability to all nodes
@@ -17,10 +17,11 @@ while(~closeEnough(lastState,stateVect,errorMargin))
     i=i+1;
 end
 fprintf('steady after %d iterations\n',i);
+
+steadyState=stateVect;
 end
 
 function [aboutEqual] = closeEnough(prevstate, currentstate, errorMargin)
-%%Checks to see if we need to continue calculating the next state vector.
 aboutEqual=false;
 if length(prevstate) == length(currentstate)
     aboutEqual=true;

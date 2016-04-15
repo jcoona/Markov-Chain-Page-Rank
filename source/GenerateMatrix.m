@@ -1,10 +1,10 @@
-function pmatrix = generateMatrix(nodes, sourcedest)
+function pmatrix = GenerateMatrix(nodes, sourcedest)
 %This function will run the page rank algorithm on an input of page
 %information.
 
 %make nxn matrix n = nodes
 pmatrix = zeros(nodes, nodes);
-fprintf('Solving pmatrix now.\n');
+fprintf('Solving adjacency matrix now.\n');
 for i = 1:length(sourcedest)
    %count number of times j shows up in the source column
    sourcenode = sourcedest(i,1);
