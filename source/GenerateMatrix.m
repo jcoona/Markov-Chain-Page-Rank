@@ -1,6 +1,5 @@
 function pmatrix = GenerateMatrix(nodes, sourcedest)
-%This function will run the page rank algorithm on an input of page
-%information.
+%This function will generate the initial adjacency matrix
 
 %make nxn matrix n = nodes
 pmatrix = zeros(nodes, nodes);

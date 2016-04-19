@@ -1,4 +1,6 @@
 function stateVect = MarkovChain(nodes, transitionMatrix)
+%%This function generates a steady state vector.
+
 errorMargin = .0000001;
 stateVect = ones(nodes,1)/nodes;
 %initialize state vector to give equal probability to all nodes

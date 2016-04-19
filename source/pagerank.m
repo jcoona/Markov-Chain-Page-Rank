@@ -1,4 +1,7 @@
 function [ rankedPages ] = pagerank(nodes, indexlinks, sourcedest, damping)
+%%This function runs the algorithm PageRank and determines an adjacency
+%%matrix, steady state vector, and determines the outcome of best ranked
+%%pages in the end.
 
 adjacencyMatrix = GenerateMatrix(nodes, sourcedest);
 

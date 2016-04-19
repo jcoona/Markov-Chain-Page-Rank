@@ -1,4 +1,4 @@
-function [ Nodes, Edges, IndexLinks, SourceDest ] = loadhollins( inputfile )
+function [Nodes, Edges, IndexLinks, SourceDest] = loadhollins(inputfile)
 %This function loads the input file and organizes it into easier to view
 %variables.
 
