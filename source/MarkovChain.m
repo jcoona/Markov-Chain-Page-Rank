@@ -16,7 +16,7 @@ while(~closeEnough(lastState,stateVect,errorMargin))
     stateVect = mtimes(transitionMatrix,stateVect);
     i=i+1;
 end
-fprintf('steady after %d iterations\n',i);
+fprintf('Steady after %d iterations\n',i);
 end
 
 function [aboutEqual] = closeEnough(prevstate, currentstate, errorMargin)
