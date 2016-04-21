@@ -22,9 +22,9 @@ fprintf('\nBeginning the PageRank for damping factor 0.50.\n');
 rankedpages50 = pagerank(nodes, indexlinks, sourcedest, 0.50);
 
 %%initiate some files
-file85 = fopen('damping85.txt', 'w');
-file95 = fopen('damping95.txt', 'w');
-file50 = fopen('damping50.txt', 'w');
+file85 = fopen('damping85.csv', 'w');
+file95 = fopen('damping95.csv', 'w');
+file50 = fopen('damping50.csv', 'w');
 
 %%write the PageRank results to the text files!
 makefile(0.85, file85, rankedpages85);
